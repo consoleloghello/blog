@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "miaovBlog demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "moogodb"
+  ],
+  "author": "wxt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "body-parser":"^1.15.2",
+    "cookies":"^0.6.1",
+    "markdown":"^0.5.0",
+    "mongoose":"^4.5.7",
+    "swig":"^1.4.2"
+  }
+}
