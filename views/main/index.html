@@ -4,6 +4,40 @@
 	<title>博客</title>
 </head>
 <body>
+	<h1>首页</h1>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<title>博客</title>
+</head>
+<body>
+	<h1>欢迎来到我的博客！</h1>
+
+	{% if userInfo._id %}
+		<h3>自动登录状态</h3>
+		
+		{% if userInfo.isAdmin %}
+			<p>
+				<span>你好！{{userInfo.username}} <em>管理员</em>，欢迎光临我的博客！</span>
+				<a href="/admin">进入管理首页</a>
+			</p>
+			
+		{% else %}
+			<span>你好！{{userInfo.username}}，欢迎光临我的博客！</span>
+		{% endif %}
+	{% else %}
+		<h3>当前是未登录状态</h3>
+	{% endif %}
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<title>博客</title>
+</head>
+<body>
 	<h1>欢迎来到我的博客！</h1>
 
 	{% if userInfo._id %}
@@ -38,12 +72,13 @@
         <div>用户信息</div>
         <div>{{userInfo.username}}</div>
         {%if userInfo.isAdmin%}
-        <div>
-            <span>你好,管理员！</span>
-            <a href="/admin">进入管理</a>
-        </div>
+			<div>
+				<span>你好,管理员！</span>
+				<a href="/admin">进入管理</a>
+			</div>
         {%else%}
-        <div>你好欢迎来到我的博客！</div>
+			<span class="username"></span>
+        	<div>你好欢迎来到我的博客！</div>
         {%endif%}
         <div><a href="javascript:;" id="logout">退出</a></div>
     </div>
@@ -63,13 +98,14 @@
         <span>用户：</span><input type="text" name="username"/><br/>
         <span>密码：</span><input type="password" name="password"/><br/>
         <span>确认：</span><input type="password"name="repassword"/><br/>
-        <input type="button" value="注册"/>
+        <!--<input type="button" value="注册"/>-->
+		<button>register</button>
         <p class="colWarning"></p>
         <!--<input type="button" value="去登陆"class="colMint"/>-->
         <a href="javascript:;" class="colMint">去登陆</a>
     </form>
     {%endif%}
     <script src="/public/js/jquery-1.11.3.js"></script>
-    <!--<script src="/public/js/index.js"></script>-->
+    <script src="/public/js/index.js"></script>
 </body>
 </html>
